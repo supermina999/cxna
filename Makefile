@@ -1,5 +1,5 @@
-all: GameTime.o MyGame.o Start.o Rectangle.o Vector2.o Game.o XGraphicsDevice.o Color.o
-	g++ Start.o GameTime.o Rectangle.o MyGame.o Vector2.o Game.o XGraphicsDevice.o Color.o -lGL -lglut -o Game
+all: GameTime.o MyGame.o Start.o Rectangle.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o
+	g++ Start.o GameTime.o Rectangle.o MyGame.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o -lGL -lglut -lfreeimage -o Game
 clear:
 	rm *.o
 	rm Game
@@ -19,3 +19,7 @@ XGraphicsDevice.o: XGraphicsDevice.cpp XGraphicsDevice.h Color.h
 	g++ -c XGraphicsDevice.cpp
 Color.o: Color.cpp Color.h
 	g++ -c Color.cpp
+Texture2D.o: Texture2D.cpp Texture2D.h
+	g++ -c Texture2D.cpp
+ContentManager.o: ContentManager.cpp ContentManager.h
+	g++ -c ContentManager.cpp
