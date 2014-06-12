@@ -8,6 +8,7 @@ using namespace std;
 
 class ContentManager
 {
+public:
     ContentManager();
     string RootDirectory;
     Texture2D LoadTexture2D(string path);

@@ -19,3 +19,8 @@ void Game::Draw(GameTime gt)
 {
 
 }
+
+Game::Game()
+{
+    Content = ContentManager();
+}

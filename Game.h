@@ -11,6 +11,8 @@ public:
     virtual void Update(GameTime gameTime);
     virtual void Draw(GameTime gameTime);
     XGraphicsDevice GraphicsDevice;
+    ContentManager Content;
+    Game();
 };
 
 #endif

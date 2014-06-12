@@ -1,10 +1,11 @@
 #include "ContentManager.h"
 #include <GL/glut.h>
 #include <FreeImage.h>
+#include <iostream>
 
 Texture2D ContentManager::LoadTexture2D(string path)
 {
-    path = RootDirectory+"/"+path;
+    path = path;
     FREE_IMAGE_FORMAT formato = FreeImage_GetFileType(path.c_str(),0);//Automatocally detects the format(from over 20 formats!)
 	FIBITMAP* imagen = FreeImage_Load(formato, path.c_str());
 
@@ -14,7 +15,7 @@ Texture2D ContentManager::LoadTexture2D(string path)
 
 	int w = FreeImage_GetWidth(imagen);
 	int h = FreeImage_GetHeight(imagen);
-	//cout<<"The size of the image is: "<<textureFile<<" es "<<w<<"*"<<h<<endl; //Some debugging code
+	cout<<"The size of the image is: "<<path<<" es "<<w<<"*"<<h<<endl; //Some debugging code
 
 	GLubyte* textura = new GLubyte[4*w*h];
 	char* pixeles = (char*)FreeImage_GetBits(imagen);
@@ -38,7 +39,7 @@ Texture2D ContentManager::LoadTexture2D(string path)
 	GLenum huboError = glGetError();
 	if(huboError){
 
-	//	cout<<"There was an error loading the texture"<<endl;
+		cout<<"There was an error loading the texture"<<endl;
 	}
 	return Texture2D(w, h, texturaID);
 }

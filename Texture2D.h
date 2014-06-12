@@ -11,6 +11,7 @@ class Texture2D
 public:
     int w, h, id;
     Texture2D(int w, int h, int id);
+    Texture2D() {}
 };
 
 #endif

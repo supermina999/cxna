@@ -4,3 +4,5 @@
 #include "Game.h"
 #include "XGraphicsDevice.h"
 #include "Texture2D.h"
+#include "ContentManager.h"
+#include "SpriteBatch.h"
