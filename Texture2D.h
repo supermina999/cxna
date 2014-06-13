@@ -1,7 +1,6 @@
 #ifndef TEXTURE2D
 #define TEXTURE2D
 
-#include <FreeImage.h>
 #include <string>
 #include <GL/glut.h>
 

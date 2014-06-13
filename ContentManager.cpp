@@ -2,9 +2,6 @@
 #define ILUT_USE_OPENGL
 #include <GL/glut.h>
 #include <iostream>
-#include <IL/il.h>
-#include <IL/ilu.h>
-#include <IL/ilut.h>
 #include <string.h>
 #include <SOIL/SOIL.h>
 

@@ -1,9 +1,6 @@
 #include "cxna.h"
 #include "MyGame.h"
 #include <GL/glut.h>
-#include <IL/il.h>
-#include <IL/ilu.h>
-#include <IL/ilut.h>
 
 GameTime gt = GameTime();
 MyGame *myGame;
