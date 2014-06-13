@@ -1,5 +1,5 @@
 all: GameTime.o MyGame.o Start.o Rectangle.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o
-	g++ Start.o GameTime.o Rectangle.o MyGame.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o -lGL -lglut -lfreeimage -o Game
+	g++ Start.o GameTime.o Rectangle.o MyGame.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o -lGL -lglut -lSOIL -o Game -fpermissive
 clear:
 	rm *.o
 	rm Game

@@ -10,7 +10,8 @@ void MyGame::Initilize()
 
 void MyGame::LoadContent()
 {
-    tex = Content.LoadTexture2D("tex.bmp");
+    tex = Content.LoadTexture2D("tex.png");
+    tex = Content.LoadTexture2D("tex.png");
 }
 
 void MyGame::Update(GameTime gameTime)
@@ -21,5 +22,5 @@ void MyGame::Update(GameTime gameTime)
 void MyGame::Draw(GameTime gameTime)
 {
     //GraphicsDevice.Clear(Color(1,0,1));
-    spriteBatch.Draw(tex, 0,0);
+    spriteBatch.Draw(tex, 0,0, 100, 100);
 }

@@ -3,14 +3,16 @@
 
 #include <FreeImage.h>
 #include <string>
+#include <GL/glut.h>
 
 using namespace std;
 
 class Texture2D
 {
 public:
-    int w, h, id;
-    Texture2D(int w, int h, int id);
+    int w, h;
+    GLuint id;
+    Texture2D(int w, int h, GLuint id);
     Texture2D() {}
 };
 
