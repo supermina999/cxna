@@ -14,9 +14,11 @@ class MyEventReceiver : public IEventReceiver
 {
 public:
     MouseState *ms;
-    void Init (MouseState *ms)
+    KeyboardState *ks;
+    void Init (MouseState *ms, KeyboardState *ks)
     {
         this->ms = ms;
+        this->ks = ks;
     }
     virtual bool OnEvent(const SEvent& event)
     {
@@ -39,6 +41,10 @@ public:
                     break;
             }
         }
+        else if(event.EventType == irr::EET_KEY_INPUT_EVENT)
+        {
+            ks->u[event.KeyInput.Key] = event.KeyInput.PressedDown;
+        }
     }
 MyEventReceiver()
 {
@@ -56,7 +62,7 @@ int main(int argc, char **argv)
     device->setWindowCaption(L"CXNA");
     IVideoDriver* driver = device->getVideoDriver();
     myGame = new MyGame(driver);
-    receiver.Init(&(myGame->Mouse.ms));
+    receiver.Init(myGame->Mouse.ms, myGame->Keyboard.ks);
     myGame->Initilize();
     myGame->LoadContent();
     while (device->run() && driver)

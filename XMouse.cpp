@@ -1,6 +1,11 @@
 #include "XMouse.h"
 
-MouseState XMouse::getState()
+XMouse::XMouse()
+{
+    ms = new MouseState();
+}
+
+MouseState* XMouse::getState()
 {
     return ms;
 }

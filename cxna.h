@@ -9,3 +9,6 @@
 #include "ButtonState.h"
 #include "MouseState.h"
 #include "XMouse.h"
+#include "Keys.h"
+#include "KeyboardState.h"
+#include "XKeyboard.h"

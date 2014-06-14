@@ -23,6 +23,7 @@ public:
     XGraphicsDevice GraphicsDevice;
     ContentManager Content;
     XMouse Mouse;
+    XKeyboard Keyboard;
     Game();
     Game(IVideoDriver* driver);
 };
