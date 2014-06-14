@@ -1,5 +1,11 @@
 #include "Game.h"
 
+#include <pthread.h>
+void junk() {
+  int i;
+  i=pthread_getconcurrency();
+};
+
 void Game::Initilize()
 {
 

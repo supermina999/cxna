@@ -1,5 +1,5 @@
 all: GameTime.o MyGame.o Start.o Rectangle.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o ButtonState.o MouseState.o XMouse.o Keys.o KeyboardState.o XKeyboard.o
-	g++ Start.o GameTime.o Rectangle.o MyGame.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o ButtonState.o MouseState.o XMouse.o Keys.o KeyboardState.o XKeyboard.o -lGL -lIrrlicht -o Game
+	g++ Start.o GameTime.o Rectangle.o MyGame.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o ButtonState.o MouseState.o XMouse.o Keys.o KeyboardState.o XKeyboard.o -lGL -lIrrlicht -lm -pthread -o Game
 clear:
 	rm *.o
 	rm Game
