@@ -1,5 +1,5 @@
-all: GameTime.o MyGame.o Start.o Rectangle.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o
-	g++ Start.o GameTime.o Rectangle.o MyGame.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o -lGL -lglut -lSOIL -lIrrlicht -o Game -fpermissive
+all: GameTime.o MyGame.o Start.o Rectangle.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o ButtonState.o MouseState.o XMouse.o
+	g++ Start.o GameTime.o Rectangle.o MyGame.o Vector2.o Game.o XGraphicsDevice.o Color.o Texture2D.o ContentManager.o SpriteBatch.o ButtonState.o MouseState.o XMouse.o -lGL -lIrrlicht -o Game
 clear:
 	rm *.o
 	rm Game
@@ -25,3 +25,9 @@ ContentManager.o: ContentManager.cpp ContentManager.h
 	g++ -c ContentManager.cpp
 SpriteBatch.o: SpriteBatch.cpp SpriteBatch.h
 	g++ -c SpriteBatch.cpp
+ButtonState.o: ButtonState.h ButtonState.cpp
+	g++ -c ButtonState.cpp
+MouseState.o: MouseState.h MouseState.cpp
+	g++ -c MouseState.cpp
+XMouse.o: XMouse.h XMouse.cpp
+	g++ -c XMouse.cpp

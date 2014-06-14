@@ -1,9 +1,14 @@
 #include "XGraphicsDevice.h"
-#include <GL/glut.h>
+#include <irrlicht/irrlicht.h>
+
+using namespace irr;
+using namespace core;
+using namespace scene;
+using namespace video;
+using namespace io;
+using namespace gui;
 
 void XGraphicsDevice::Clear(Color c)
 {
-    glClearColor(c.r, c.g, c.b, c.a);
-    glClear(GL_COLOR_BUFFER_BIT);
-    glFlush();
+
 }

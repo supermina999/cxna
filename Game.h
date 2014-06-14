@@ -22,6 +22,7 @@ public:
     virtual void Draw(GameTime gameTime);
     XGraphicsDevice GraphicsDevice;
     ContentManager Content;
+    XMouse Mouse;
     Game();
     Game(IVideoDriver* driver);
 };

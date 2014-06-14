@@ -23,6 +23,6 @@ void MyGame::Draw(GameTime gameTime)
 {
     //GraphicsDevice.Clear(Color(1,0,1));
     spriteBatch.Begin();
-    spriteBatch.Draw(tex, 0, 0, 500, 500);
+    spriteBatch.Draw(tex, Mouse.getState().X, Mouse.getState().Y, 500, 500);
     spriteBatch.End();
 }

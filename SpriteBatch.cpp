@@ -9,7 +9,7 @@ SpriteBatch::SpriteBatch(XGraphicsDevice q)
 void SpriteBatch::Draw(Texture2D tex, int x, int y, int w, int h)
 {
     dimension2d<u32> s = tex.tex->getSize();
-    driver->draw2DImage(tex.tex, rect<s32>(x, y, w, h), rect<s32>(0, 0, s.Width, s.Height));
+    driver->draw2DImage(tex.tex, rect<s32>(x, y, x+w, y+h), rect<s32>(0, 0, s.Width, s.Height));
 }
 
 void SpriteBatch::Draw(Texture2D tex, int x, int y)

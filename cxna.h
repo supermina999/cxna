@@ -6,3 +6,6 @@
 #include "Texture2D.h"
 #include "ContentManager.h"
 #include "SpriteBatch.h"
+#include "ButtonState.h"
+#include "MouseState.h"
+#include "XMouse.h"
