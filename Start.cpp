@@ -1,35 +1,35 @@
 #include "cxna.h"
 #include "MyGame.h"
 #include <GL/glut.h>
+#include <irrlicht/irrlicht.h>
+
+using namespace irr;
+using namespace core;
+using namespace scene;
+using namespace video;
+using namespace io;
+using namespace gui;
 
 GameTime gt = GameTime();
 MyGame *myGame;
 
-void draw()
-{
-    myGame->Update(gt);
-    myGame->Draw(gt);
-}
-
 int main(int argc, char **argv)
 {
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_RGBA|GLUT_SINGLE);
-    glutInitWindowSize(640,480);
-    glutCreateWindow("Hello OpenGL");
-    myGame = new MyGame();
+    IrrlichtDevice *device = createDevice(video::EDT_OPENGL, dimension2d<u32>(640,480));
+    if (!device) return 1;
+    device->setWindowCaption(L"CXNA");
+    IVideoDriver* driver = device->getVideoDriver();
+    myGame = new MyGame(driver);
     myGame->Initilize();
     myGame->LoadContent();
-    glutDisplayFunc(draw);
-
-    const int XSize = 640, YSize = 480;
-    glMatrixMode (GL_PROJECTION);
-    glLoadIdentity ();
-    glOrtho (0, XSize, YSize, 0, 0, 1);
-    glDisable(GL_DEPTH_TEST);
-    glMatrixMode (GL_MODELVIEW);
-    glLoadIdentity();
-
-    glutMainLoop();
+    while (device->run() && driver)
+    {
+        if (device->isWindowActive())
+        {
+            myGame->Update(gt);
+            myGame->Draw(gt);
+        }
+    }
+    device->drop();
     return 0;
 }

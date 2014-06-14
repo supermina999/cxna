@@ -2,9 +2,19 @@
 #define GAME
 
 #include "cxna.h"
+#include <irrlicht/irrlicht.h>
+
+using namespace irr;
+using namespace core;
+using namespace scene;
+using namespace video;
+using namespace io;
+using namespace gui;
 
 class Game
 {
+private:
+    IVideoDriver* driver;
 public:
     virtual void Initilize();
     virtual void LoadContent();
@@ -13,6 +23,7 @@ public:
     XGraphicsDevice GraphicsDevice;
     ContentManager Content;
     Game();
+    Game(IVideoDriver* driver);
 };
 
 #endif

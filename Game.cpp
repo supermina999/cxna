@@ -20,6 +20,12 @@ void Game::Draw(GameTime gt)
 
 }
 
+Game::Game(IVideoDriver* driver):driver(driver)
+{
+    Content = ContentManager(driver);
+    GraphicsDevice = XGraphicsDevice(driver);
+}
+
 Game::Game()
 {
     Content = ContentManager();

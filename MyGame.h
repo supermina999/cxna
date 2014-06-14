@@ -7,4 +7,8 @@ public:
     void LoadContent();
     void Update(GameTime gameTime);
     void Draw(GameTime gameTime);
+    MyGame(IVideoDriver* driver): Game(driver)
+    {
+
+    }
 };

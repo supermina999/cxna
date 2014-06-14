@@ -1,17 +1,20 @@
 #ifndef TEXTURE2D
 #define TEXTURE2D
 
-#include <string>
-#include <GL/glut.h>
+#include <irrlicht/irrlicht.h>
 
-using namespace std;
+using namespace irr;
+using namespace core;
+using namespace scene;
+using namespace video;
+using namespace io;
+using namespace gui;
 
 class Texture2D
 {
 public:
-    int w, h;
-    GLuint id;
-    Texture2D(int w, int h, GLuint id);
+    ITexture *tex;
+    Texture2D(ITexture *tex);
     Texture2D() {}
 };
 
