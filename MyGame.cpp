@@ -9,6 +9,7 @@ int h, w;
 
 void MyGame::Initilize()
 {
+    Content.RootDirectory = "Content";
     spriteBatch = SpriteBatch(GraphicsDevice);
     h = w = 500;
 }

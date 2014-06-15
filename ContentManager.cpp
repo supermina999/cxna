@@ -3,7 +3,8 @@
 
 Texture2D ContentManager::LoadTexture2D(std::string path)
 {
-     return Texture2D(driver->getTexture(path.c_str()));
+    if (RootDirectory != "") path = RootDirectory+"/"+path;
+    return Texture2D(driver->getTexture(path.c_str()));
 }
 
 ContentManager::ContentManager()
