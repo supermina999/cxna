@@ -4,8 +4,14 @@
 class Rectangle
 {
 public:
-    int x, y, width, height;
+    int X, Y, width, height;
     Rectangle(int x, int y, int width, int height);
+    void Offset(int dx, int dy)
+    {
+      X += dx;
+      Y += dy;
+    }
+    Rectangle() {}
 };
 
 #endif

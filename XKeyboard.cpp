@@ -5,7 +5,7 @@ XKeyboard::XKeyboard()
     ks = new KeyboardState();
 }
 
-KeyboardState *XKeyboard::getState()
+KeyboardState *XKeyboard::GetState()
 {
     return ks;
 }

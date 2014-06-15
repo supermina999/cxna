@@ -5,7 +5,7 @@ XMouse::XMouse()
     ms = new MouseState();
 }
 
-MouseState* XMouse::getState()
+MouseState* XMouse::GetState()
 {
     return ms;
 }

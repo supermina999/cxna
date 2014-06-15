@@ -8,7 +8,7 @@ class XKeyboard
 public:
     KeyboardState *ks;
     XKeyboard();
-    KeyboardState *getState();
+    KeyboardState *GetState();
 };
 
 #endif // XKEYBOARD

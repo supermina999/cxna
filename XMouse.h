@@ -8,7 +8,7 @@ class XMouse
 public:
     XMouse();
     MouseState *ms;
-    MouseState* getState();
+    MouseState* GetState();
 };
 
 #endif // XMOUSE

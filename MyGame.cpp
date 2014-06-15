@@ -22,19 +22,19 @@ void MyGame::LoadContent()
 void MyGame::Update(GameTime gameTime)
 {
     int t = gameTime.EllapsedGameTime;
-    if (Keyboard.getState()->isKeyDown(Keys::ArrowLeft))
+    if (Keyboard.GetState()->isKeyDown(Keys::ArrowLeft))
     {
         w-=t/10;
     }
-    if (Keyboard.getState()->isKeyDown(Keys::ArrowRight))
+    if (Keyboard.GetState()->isKeyDown(Keys::ArrowRight))
     {
         w+=t/10;
     }
-    if (Keyboard.getState()->isKeyDown(Keys::ArrowUp))
+    if (Keyboard.GetState()->isKeyDown(Keys::ArrowUp))
     {
         h-=t/10;
     }
-    if (Keyboard.getState()->isKeyDown(Keys::ArrowDown))
+    if (Keyboard.GetState()->isKeyDown(Keys::ArrowDown))
     {
         h+=t/10;
     }
@@ -44,6 +44,6 @@ void MyGame::Draw(GameTime gameTime)
 {
     //GraphicsDevice.Clear(Color(1,0,1));
     spriteBatch.Begin();
-    spriteBatch.Draw(tex, Mouse.getState()->X, Mouse.getState()->Y, w, h);
+    spriteBatch.Draw(tex, Mouse.GetState()->X, Mouse.GetState()->Y, w, h);
     spriteBatch.End();
 }
