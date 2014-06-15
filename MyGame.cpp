@@ -20,21 +20,22 @@ void MyGame::LoadContent()
 
 void MyGame::Update(GameTime gameTime)
 {
+    int t = gameTime.EllapsedGameTime;
     if (Keyboard.getState()->isKeyDown(Keys::ArrowLeft))
     {
-        w-=10;
+        w-=t/10;
     }
     if (Keyboard.getState()->isKeyDown(Keys::ArrowRight))
     {
-        w+=10;
+        w+=t/10;
     }
     if (Keyboard.getState()->isKeyDown(Keys::ArrowUp))
     {
-        h-=10;
+        h-=t/10;
     }
     if (Keyboard.getState()->isKeyDown(Keys::ArrowDown))
     {
-        h+=10;
+        h+=t/10;
     }
 }
 

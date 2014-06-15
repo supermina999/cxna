@@ -65,10 +65,15 @@ int main(int argc, char **argv)
     receiver.Init(myGame->Mouse.ms, myGame->Keyboard.ks);
     myGame->Initilize();
     myGame->LoadContent();
+    int then = device->getTimer()->getTime();
     while (device->run() && driver)
     {
         if (device->isWindowActive())
         {
+            int now = device->getTimer()->getTime();
+            gt.TotalGameTime = now;
+            gt.EllapsedGameTime = now-then;
+            then = now;
             myGame->Update(gt);
             myGame->Draw(gt);
         }
