@@ -1,5 +1,4 @@
 #include "SpriteBatch.h"
-#include <GL/glut.h>
 
 SpriteBatch::SpriteBatch(XGraphicsDevice q)
 {
