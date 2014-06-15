@@ -30,6 +30,7 @@ Game::Game(IVideoDriver* driver):driver(driver)
 {
     Content = ContentManager(driver);
     GraphicsDevice = XGraphicsDevice(driver);
+    Keyboard = XKeyboard();
 }
 
 Game::Game()
